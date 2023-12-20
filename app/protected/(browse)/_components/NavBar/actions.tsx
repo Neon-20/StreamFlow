@@ -10,9 +10,9 @@ const Actions = async() => {
         lg:ml-0">
         {!user && (
             <SignInButton>
-                <Button>
-                    Login
-                </Button>
+                <button className = "btn-login hover:text-gray-400">
+                Join Now
+                </button>
             </SignInButton>
         )}
         {!!user && (

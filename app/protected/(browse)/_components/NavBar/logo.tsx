@@ -15,8 +15,9 @@ const poppins = Poppins({
 export const Logo = () => {
     return ( 
         <Link href="/">
-        <div className="hidden lg:flex items-center
+        <div className="flex items-center
         hover:opacity-50 transition">
+        <div className="p-1 mr-10 shrink-0 lg:mr-0 lg:shrink">
         <Image
         src="/logo.png"
         alt="Logo"
@@ -24,9 +25,12 @@ export const Logo = () => {
         height="32" 
         className="cursor-pointer sm:flex"
         />
+        </div>
+        <div className={cn("hidden lg:block",poppins.className)}>
         <p className="text-lg text-white font-semibold text-transparent p-2 cursor-pointer">
         StreamFlow
         </p>
+        </div>
         </div>
         </Link>
 );

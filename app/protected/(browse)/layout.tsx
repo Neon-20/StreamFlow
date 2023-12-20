@@ -1,4 +1,5 @@
-import NavBar from "./_components/NavBar";
+import {NavBar} from "./_components/NavBar";
+import {SideBar} from "./_components/SideBar";
 
 const BrowseLayout = ({
     children,
@@ -8,7 +9,8 @@ const BrowseLayout = ({
     return ( 
         <>
         <NavBar/>
-        <div className="flex h-full pt-20">
+        <div className="flex h-full pt-24">
+        <SideBar/>
         {children}
         </div>
         </>
