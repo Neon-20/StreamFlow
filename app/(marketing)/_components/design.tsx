@@ -8,7 +8,7 @@ import MemberSubscribed from "./subscribed";
 const DesignPage = () => {
     return ( 
         <main className="flex relative h-screen flex-col
-        items-center justify-between p-36 max-sm:p-14">
+        items-center justify-center p-36 max-sm:p-14">
         <div className="flex h-full w-full 
         items-center flex-col gap-6">
         <MemberSubscribed/>
