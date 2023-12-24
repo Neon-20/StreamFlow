@@ -1,7 +1,8 @@
-
+"use client"
 import {CircleDollarSign, ExternalLink, GithubIcon, LinkedinIcon} from "lucide-react";
 import Link from "next/link";
 import MemberSubscribed from "./subscribed";
+import { toast } from "sonner";
 // import {PostHog} from "posthog-node"
 
 
@@ -23,7 +24,8 @@ const DesignPage = () => {
         </div>  
         <div className="flex gap-4 flex-col w-full items-center justify-center">
         <Link href="/sign-in">
-        <button className="btn font-medium"> Stream Now 🎮
+        <button
+        className="btn font-medium"> Stream Now 🎮
         </button>
         </Link>
         <div className="flex p-2 gap-6 text-gray-300 translate-x-0.5 duration-300">

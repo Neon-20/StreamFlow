@@ -36,7 +36,7 @@ const Actions = async() => {
                 </Link>
                 </Button>
                 <UserButton
-                afterSignOutUrl="/"
+                afterSignOutUrl="/protected"
                 />
             </div>
         )}

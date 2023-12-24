@@ -34,7 +34,8 @@ export const UserItem = ({
         variant="ghost"
         className={cn("w-full h-12 hover:bg-slate-800/100",
         close ? "justify-center hover:bg-[#111827] hover:opacity-70":"justify-start",
-        isActive && "bg-accent"
+        isActive && "bg-slate-800",
+        isActive && close && "bg-[#111827]"
         )}
         >
         <Link href={href}>
@@ -55,7 +56,7 @@ export const UserItem = ({
                 <LiveBadge className="ml-auto"/>
             )}
             {close && isLive && (
-                <LiveBadge className="mt-1"/>
+                <LiveBadge/>
             )}
         </div>
         </Link>

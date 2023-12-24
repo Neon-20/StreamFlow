@@ -5,17 +5,15 @@ import {motion} from "framer-motion";
 import { useEffect, useState } from "react";
 import { ToggleSkeleton } from "./toggle";
 import { RecommendedSkeleton } from "./recommended";
+import { useIsClient } from "usehooks-ts";
 
 interface CollapseProps{
     children:React.ReactNode
 }
 
 const Collapse = ({children}:CollapseProps) => {
-    const[isClient,setIsClient] = useState(false);
+    const isClient = useIsClient();
     const {close} = useSideBar((state)=>state); 
-    useEffect(()=>{
-    setIsClient(true);
-    },[])
     
     if(!isClient){
         return (

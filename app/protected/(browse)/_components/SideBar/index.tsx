@@ -3,19 +3,24 @@ import Collapse from "./collapsable";
 import {Recommended, RecommendedSkeleton} from "./recommended";
 import { Toggle } from "./toggle";
 import { getRecommended } from '@/lib/recommended';
+import { getFollowedUsers } from "@/lib/follow-service";
+import { Following } from "./following";
 
 export const SideBar = async() => {
 //fetch data
 //fetch recommended lists and followers
 
 const recommended = await getRecommended();
+const following = await getFollowedUsers();
+
     return ( 
         <Collapse>
         {/* Any server component here */}
         <Toggle/>
         <div className="space-y-4 pt-4 lg:pt-0">
+        <Following data = {following}/>
         <Recommended
-        data = {recommended}
+        data={recommended}
         />
         </div>
         </Collapse>

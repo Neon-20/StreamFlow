@@ -31,7 +31,7 @@ export const Toggle = () => {
         {!close && (
             <div className="p-6 pl-8 mb-2 flex items-center
             w-full">
-            <p className="font-semibold text-white">
+            <p className="font-semibold text-base text-white">
             For You
             </p>
             <Button className="h-auto ml-auto p-2"

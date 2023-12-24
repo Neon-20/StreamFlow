@@ -20,6 +20,15 @@ const BrowseLayout = ({
         {children}
         </Container>
         </div>
+        <NavBar/>
+        {/* <div className="flex h-full pt-24">
+        <Suspense fallback={<SideBarSkeleton/>}>    
+        <SideBar/>
+        </Suspense>
+        <Container>
+        {children}
+        </Container>
+        </div> */}
         </>
     );
 }

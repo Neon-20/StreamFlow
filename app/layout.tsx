@@ -4,6 +4,8 @@ import './globals.css'
 import { ClerkProvider } from '@clerk/nextjs'
 import {shadesOfPurple,dark} from "@clerk/themes";
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/sonner"
+
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -32,8 +34,11 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           > */}
+          <div className='min-h-screen mx-auto max-w-7xl sm:max-w-full'>
         {children}
+        </div>
         {/* </ThemeProvider> */}
+        <Toaster richColors position="bottom-center" expand={false}/>
       </body>
     </html>
     </ClerkProvider>

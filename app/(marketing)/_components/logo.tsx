@@ -28,7 +28,7 @@ const Logo = () => {
         height="40"
         className="cursor-pointer"
         />
-        <p className="text-xl text-white font-semibold text-transparent p-2 cursor-pointer">
+        <p className="text-xl text-white font-semibold text-transparent cursor-pointer">
         StreamFlow
         </p>
         </div>

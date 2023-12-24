@@ -1,21 +1,45 @@
-import { getSelfUser } from "./auth-service";
 import { db } from "./db";
-import {User} from "@prisma/client";
-//Well we will eliminate the current user from recommended list
+import { getSelfUser } from "./auth-service";
 
-export const getRecommended = async() =>{
-    // await new Promise(resolve => setTimeout(resolve,1000));
-    const users = await db.user.findMany({  
-        orderBy:{
-            createdAt:"desc"
-        }
+
+export const getRecommended =  async() =>{
+let userId;
+    try{
+        const self = await getSelfUser();
+        userId = self.id;
+    }
+    catch{
+        userId = null
+    }
+    let users = []
+    if(userId){
+        users = await db.user.findMany({
+            where:{
+                AND:[
+                    {
+                        NOT:{
+                            id:userId,
+                        }
+                    },
+                    {
+                        NOT:{
+                            followedBy:{
+                                some:{
+                                    followerId:userId
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
     })
-    // console.log(users)
+}
+    else{
+        users = await db.user.findMany({
+            orderBy:{
+                createdAt:"desc"
+            }
+        })
+    }
     return users;
 }
-
-// Formula = total - self = recommended
-
-
-// recommended function
-
