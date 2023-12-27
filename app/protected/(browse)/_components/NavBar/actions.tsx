@@ -23,10 +23,10 @@ const Actions = async() => {
                 size="sm"
                 variant="ghost"
                 className="text-muted-foreground
-                hover:text-primary"
+                hover:text-primary hover:animate-pulse"
                 asChild
                 >
-                <Link href={`/protected/u/${user.username}`}>
+                <Link href={`/u/${user.username}`}>
                     <Clapperboard
                     className="h-5 w-5 lg:mr-2 "
                     />

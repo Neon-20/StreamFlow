@@ -25,7 +25,7 @@ export const Following = ({
                 <p className="text-md font-medium text-muted-foreground">Following</p>
             </div>
         )}
-        <ul className="space-y-4 p-4">
+        <ul className="space-y-2 p-2">
         {data.map((follow)=>(
             <UserItem
             key={follow.following.id}

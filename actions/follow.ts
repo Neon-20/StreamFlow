@@ -9,7 +9,7 @@ export const onFollow = async(id:string) =>{
     revalidatePath("/protected");
 
     if(followedUser){
-        revalidatePath(`/${followedUser.following.username}`)
+        revalidatePath(`/protected/${followedUser.following.username}`)
     }
     return followedUser;
     }

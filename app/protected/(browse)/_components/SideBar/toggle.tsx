@@ -21,7 +21,7 @@ export const Toggle = () => {
             pt-4 mb-4">
                 <Button 
                 variant="ghost"
-                className="p-4 text-white"
+                className="p-2 text-white"
                 onClick={onOpen}  
                 >
                 <ArrowRight className="h-4 w-4"/>

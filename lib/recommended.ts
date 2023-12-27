@@ -29,6 +29,16 @@ let userId;
                                 }
                             }
                         }
+                    },
+                    {
+                        NOT:{
+                            blocking:{
+                                some:{
+                                    blockerId:userId
+                                }
+                            }
+                        }
+                    
                     }
                 ]
             }

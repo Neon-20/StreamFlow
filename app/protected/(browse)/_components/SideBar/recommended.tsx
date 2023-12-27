@@ -21,7 +21,7 @@ export const Recommended = ({data}:RecommendedProps) => {
         <p className="text-md font-medium text-muted-foreground">Recommended</p>
         </div>
         )}
-        <ul className="space-y-4 p-4">
+        <ul className="space-y-2 p-2">
         {data.map((user)=>(
             <UserItem
             key={user.id}

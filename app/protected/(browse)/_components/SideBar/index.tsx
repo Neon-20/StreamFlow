@@ -17,7 +17,7 @@ const following = await getFollowedUsers();
         <Collapse>
         {/* Any server component here */}
         <Toggle/>
-        <div className="space-y-4 pt-4 lg:pt-0">
+        <div className="space-y-2 pt-4 lg:pt-0">
         <Following data = {following}/>
         <Recommended
         data={recommended}
