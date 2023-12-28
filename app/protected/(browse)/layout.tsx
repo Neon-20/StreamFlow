@@ -4,6 +4,8 @@ import {SideBar} from "./_components/SideBar";
 import Container from "./_components/container";
 import { SideBarSkeleton } from './_components/SideBar/index';
 
+
+
 const BrowseLayout = ({
     children,
 }:{

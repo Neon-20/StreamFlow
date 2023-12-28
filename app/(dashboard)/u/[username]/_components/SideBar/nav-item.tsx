@@ -26,7 +26,7 @@ export const NavItem = ({
         asChild
         variant="ghost"
         className={cn(
-        "w-full h-12",
+        "w-full h-12 hover:bg-slate-800 hover:text-white",
         close ? "justify-center" : "justify-start",
         isActive && "bg-slate-800 "
         )}
