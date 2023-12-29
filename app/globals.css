@@ -552,3 +552,29 @@ body {
 .Btn:active {
   transform: scale(0.95);
 }
+
+/* inspired form gumroad website */
+/* .btn-guest {
+  --bg: #453e3e;
+  --hover-bg: #8e65ba;
+  --hover-text: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.btn-guest:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.btn-guest:active {
+  transform: translate(0);
+  box-shadow: none;
+} */
