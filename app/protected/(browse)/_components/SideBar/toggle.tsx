@@ -51,7 +51,7 @@ export const Toggle = () => {
 
 export const ToggleSkeleton = () =>{
     return(
-        <div className="p-6 pl-8 mb-2 hidden lg:flex
+        <div className="px-10 pl-8 mb-2 hidden lg:flex
         items-center justify-between
         w-full">
         <svg className="pl" width="240" height="240" viewBox="0 0 240 240">

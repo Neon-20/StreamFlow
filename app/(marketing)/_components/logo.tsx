@@ -20,7 +20,7 @@ const Logo = () => {
     return ( 
         <div className="justify-between flex items-center mr-6 mt-2 cursor-pointer">
         <div className="hover:opacity-200/10 transition items-center
-        gap-x-2 p-2 hidden md:flex cursor-pointer">
+        gap-x-2 p-2 hidden md:flex cursor-pointer my-0-auto">
         <Image
         src="/logo.png"
         alt="Logo"
@@ -28,11 +28,17 @@ const Logo = () => {
         height="40"
         className="cursor-pointer"
         />
-        <p className="text-xl text-white font-semibold text-transparent cursor-pointer">
+        <Link href="">
+        <p className="text-xl text-white font-semibold text-transparent cursor-pointer z-50">
         StreamFlow
         </p>
+        </Link>
         </div>
-        <Heart/>
+        <Link href="/protected">
+        <button
+        className="btn font-semibold z-50 hidden lg:block"> Guest View 👀
+        </button>
+        </Link>
         </div>
 );
 }

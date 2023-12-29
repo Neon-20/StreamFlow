@@ -4,8 +4,8 @@ const MarketingLayout = ({
     children:React.ReactNode
 }) =>{
     return (
-        <main className="max-h-screen overflow-x-hidden overflow-y-hidden
-        mx-auto">
+        <main className="max-h-screen overflow-hidden
+        ">
         {children}
         </main>
     )
