@@ -27,7 +27,7 @@ export const Container = ({
 
     return(
         <div
-        className={cn("flex-2",
+        className={cn("flex-1",
         close ? "ml-[70px]" : "ml-[70px] lg:ml-60"
         )}
         >
