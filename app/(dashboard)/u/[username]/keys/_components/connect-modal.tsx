@@ -11,8 +11,18 @@ import {
     SelectTrigger,
     SelectValue
 } from "@/components/ui/select";
+import { IngressInput } from "livekit-server-sdk";
+import { useState } from "react";
+
+const RTMP = String(IngressInput.RTMP_INPUT)
+const WHIP = String(IngressInput.WHIP_INPUT)
+
+type IngressType = typeof RTMP | typeof WHIP
+
 
 export const ConnectModal = () =>{
+    const[IngressType,setIngressType] = useState<IngressType>(RTMP)
+
     return(
         <Dialog>
             <DialogTrigger asChild> 
