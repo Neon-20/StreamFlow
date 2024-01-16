@@ -3,10 +3,16 @@ import {CircleDollarSign, ExternalLink, GithubIcon, LinkedinIcon} from "lucide-r
 import Link from "next/link";
 import MemberSubscribed from "./subscribed";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 // import {PostHog} from "posthog-node"
 
 
 const DesignPage = () => {
+    const router = useRouter();
+
+    const onClick = () =>{
+        router.push("/sign-in")
+    }
     return ( 
         <main className="flex relative h-screen flex-col
         items-center justify-center p-36 max-sm:p-14">
@@ -23,11 +29,10 @@ const DesignPage = () => {
         </p>
         </div>  
         <div className="flex gap-4 flex-col w-full items-center justify-center">
-        <Link href="/sign-in">
         <button
+        onClick={onClick}
         className="btn font-medium"> Stream Now 🎮
         </button>
-        </Link>
         <div className="flex p-2 gap-6 text-gray-300 translate-x-0.5 duration-300">
         <Link href = "https://github.com/Neon-20" target ="_blank">
         <GithubIcon className="h-6 w-6 hover:text-white"/>
